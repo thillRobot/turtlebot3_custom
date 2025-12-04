@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<sdf version='1.6'>
+  <model name='turtlebot3_brown3'>
+    <link name='brown3_walls'>
+      <pose frame=''>-0.05 3.1 0 0 0 -1.5708</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <visual name='brown3_walls_visual'>
+        <pose frame=''>0 0 -0.3 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://turtlebot3_brown3/meshes/brown3_walls.dae</uri>
+            <scale>0.25 0.25 0.25</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='brown3_walls_collision'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 -0.3 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://turtlebot3_brown3/meshes/brown3_walls.dae</uri>
+            <scale>0.25 0.25 0.25</scale>
+          </mesh>
+        </geometry>
+        <surface>
+          <bounce/>
+          <friction>
+            <ode/>
+          </friction>
+          <contact>
+          <ode/>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>
