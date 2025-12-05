@@ -17,9 +17,11 @@ cd ~/ros2_ws
 colcon build
 ```
 
-set the model directory with the GZ yayay environment var
+set the model directory with the new GZ environment var
+put this in ~/.bashrc so it runs each time
 ```
-export GZ_SIM_RESOURCE_PATH=~/ros2_ws/src/turtlebot3_custom/models/
+echo "export GZ_SIM_RESOURCE_PATH=~/ros2_ws/src/turtlebot3_custom/models/" >> ~/.bashrc
+source ~/.bashrc
 ```
 
 test the robot in TNTech Brownhall third floor
