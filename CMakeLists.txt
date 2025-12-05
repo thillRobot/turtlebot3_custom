@@ -20,6 +20,10 @@ find_package(gz-sim REQUIRED)
 find_package(gz_plugin_vendor REQUIRED)
 find_package(gz-plugin REQUIRED)
 
+file(MAKE_DIRECTORY "include")
+file(MAKE_DIRECTORY "rviz")
+
+
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
