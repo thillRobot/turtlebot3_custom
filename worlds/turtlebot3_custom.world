@@ -64,7 +64,7 @@
     </include>
 
     <model name="turtlebot3_custom">
-      <static>true</static>
+      <static>1</static>
       <include>
         <uri>model://turtlebot3_custom</uri>
       </include>

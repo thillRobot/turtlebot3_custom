@@ -39,6 +39,33 @@ include_directories(
   ${GZ_SIM_INCLUDE_DIRS}
 )
 
+set(EXEC_NAME "turtlebot3_drive")
+
+add_executable(${EXEC_NAME} src/turtlebot3_drive.cpp)
+target_link_libraries(${EXEC_NAME}
+  ${geometry_msgs_TARGETS}
+  ${nav_msgs_TARGETS}
+  ${sensor_msgs_TARGETS}
+  rclcpp::rclcpp
+  tf2::tf2
+)
+
+set(OBSTACLE_LIBS
+  obstacles
+  obstacle1
+  obstacle2
+)
+
+foreach(lib ${OBSTACLE_LIBS})
+  add_library(${lib} SHARED src/${lib}.cpp)
+  target_link_libraries(${lib}
+    PUBLIC
+    gz-sim::gz-sim
+    gz-math::gz-math
+  )
+endforeach()
+
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
