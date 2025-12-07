@@ -414,7 +414,7 @@
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <effort>20</effort>
+	  <effort>50</effort> <!-- increased from 20 -->
         </limit>
       </axis>
     </joint>
@@ -426,7 +426,7 @@
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <effort>20</effort>
+          <effort>50</effort> <!-- increased from 20 -->
         </limit>
       </axis>
     </joint>

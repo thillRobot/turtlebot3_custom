@@ -19,9 +19,12 @@ find_package(gz_sim_vendor REQUIRED)
 find_package(gz-sim REQUIRED)
 find_package(gz_plugin_vendor REQUIRED)
 find_package(gz-plugin REQUIRED)
+find_package(ament_cmake_python REQUIRED) # Important for Python integration
+find_package(rclpy REQUIRED) # Or other Python dependencies
 
 file(MAKE_DIRECTORY "include")
 file(MAKE_DIRECTORY "rviz")
+file(MAKE_DIRECTORY "lib")
 
 
 # uncomment the following section in order to fill in
@@ -91,6 +94,14 @@ install(DIRECTORY include/
   DESTINATION include/
 )
 
+ament_python_install_package(${PROJECT_NAME}) # This handles the Python package installation
+
+# Install Python scripts as executables
+install(PROGRAMS
+  ${PROJECT_NAME}/teleop_keyboard.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 ################################################################################
 # Macro for ament package
 ################################################################################
@@ -100,6 +111,7 @@ ament_export_dependencies(
   geometry_msgs
   nav_msgs
   rclcpp
+  rclpy
   sensor_msgs
   tf2
 )

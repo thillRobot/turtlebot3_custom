@@ -1,0 +1,136 @@
+[0.007s] Invoking command in '/home/thill/ros2_ws/src/turtlebot3_custom/build/turtlebot3_custom': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/thill/ros2_ws/src/turtlebot3_custom -DCMAKE_INSTALL_PREFIX=/home/thill/ros2_ws/src/turtlebot3_custom/install/turtlebot3_custom
+[0.052s] -- The C compiler identification is GNU 13.3.0
+[0.095s] -- The CXX compiler identification is GNU 13.3.0
+[0.108s] -- Detecting C compiler ABI info
+[0.181s] -- Detecting C compiler ABI info - done
+[0.188s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.189s] -- Detecting C compile features
+[0.189s] -- Detecting C compile features - done
+[0.196s] -- Detecting CXX compiler ABI info
+[0.276s] -- Detecting CXX compiler ABI info - done
+[0.283s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.283s] -- Detecting CXX compile features
+[0.283s] -- Detecting CXX compile features - done
+[0.287s] -- Found ament_cmake: 2.7.3 (/opt/ros/kilted/share/ament_cmake/cmake)
+[0.412s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.517s] -- Found ros_gz_sim: 2.1.11 (/opt/ros/kilted/share/ros_gz_sim/cmake)
+[0.569s] -- Found rosidl_generator_c: 4.9.5 (/opt/ros/kilted/share/rosidl_generator_c/cmake)
+[0.586s] -- Found rosidl_generator_cpp: 4.9.5 (/opt/ros/kilted/share/rosidl_generator_cpp/cmake)
+[0.604s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.624s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.706s] -- Found rmw_implementation_cmake: 7.8.2 (/opt/ros/kilted/share/rmw_implementation_cmake/cmake)
+[0.710s] -- Found rmw_fastrtps_cpp: 9.3.3 (/opt/ros/kilted/share/rmw_fastrtps_cpp/cmake)
+[0.797s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.806s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.048s] -- Found nav_msgs: 5.5.1 (/opt/ros/kilted/share/nav_msgs/cmake)
+[1.073s] -- Found sensor_msgs: 5.5.1 (/opt/ros/kilted/share/sensor_msgs/cmake)
+[1.096s] -- Found gz_math_vendor: 0.2.5 (/opt/ros/kilted/share/gz_math_vendor/cmake)
+[1.109s] -- Looking for gz-math8 -- found version 8.2.0
+[1.115s] -- Searching for dependencies of gz-math8
+[1.117s] -- Looking for gz-utils3 -- found version 3.1.1
+[1.117s] -- Searching for dependencies of gz-utils3
+[1.122s] -- Found gz_sim_vendor: 0.2.3 (/opt/ros/kilted/share/gz_sim_vendor/cmake)
+[1.181s] -- Looking for gz-sim9 -- found version 9.5.0
+[1.181s] -- Searching for dependencies of gz-sim9
+[1.183s] -- Looking for sdformat15 -- found version 15.3.0
+[1.183s] -- Searching for dependencies of sdformat15
+[1.187s] -- Checking for module 'tinyxml2'
+[1.201s] --   Found tinyxml2, version 10.0.0
+[1.231s] -- Looking for gz-math8 -- found version 8.2.0
+[1.231s] -- Looking for gz-utils3 -- found version 3.1.1
+[1.231s] -- Searching for dependencies of gz-utils3
+[1.231s] -- Searching for <gz-utils3> component [cli]
+[1.234s] -- Looking for gz-utils3-cli -- found version 3.1.1
+[1.234s] -- Searching for dependencies of gz-utils3-cli
+[1.238s] -- Looking for gz-plugin3 -- found version 3.1.0
+[1.238s] -- Searching for dependencies of gz-plugin3
+[1.238s] -- Looking for gz-utils3 -- found version 3.1.1
+[1.238s] -- Searching for <gz-plugin3> component [loader]
+[1.241s] -- Looking for gz-plugin3-loader -- found version 3.1.0
+[1.241s] -- Searching for dependencies of gz-plugin3-loader
+[1.241s] -- Searching for <gz-plugin3> component [register]
+[1.244s] -- Looking for gz-plugin3-register -- found version 3.1.0
+[1.244s] -- Searching for dependencies of gz-plugin3-register
+[1.247s] -- Looking for gz-transport14 -- found version 14.2.0
+[1.247s] -- Searching for dependencies of gz-transport14
+[1.351s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.21.12") 
+[1.366s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[1.370s] -- Checking for module 'libzmq >= 4'
+[1.383s] --   Found libzmq, version 4.3.5
+[1.421s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[1.426s] -- Checking for module 'uuid'
+[1.439s] --   Found uuid, version 2.39.3
+[1.469s] -- Found UUID: TRUE  
+[1.469s] -- Looking for gz-utils3 -- found version 3.1.1
+[1.472s] -- Looking for gz-msgs11 -- found version 11.1.0
+[1.472s] -- Searching for dependencies of gz-msgs11
+[1.493s] -- Looking for gz-utils3 -- found version 3.1.1
+[1.493s] -- Looking for gz-math8 -- found version 8.2.0
+[1.499s] -- Searching for <gz-transport14> component [log]
+[1.501s] -- Looking for gz-transport14-log -- found version 14.2.0
+[1.501s] -- Searching for dependencies of gz-transport14-log
+[1.502s] -- Searching for <gz-transport14> component [parameters]
+[1.504s] -- Looking for gz-transport14-parameters -- found version 14.2.0
+[1.504s] -- Searching for dependencies of gz-transport14-parameters
+[1.505s] -- Looking for gz-msgs11 -- found version 11.1.0
+[1.508s] -- Looking for gz-common6 -- found version 6.2.1
+[1.508s] -- Searching for dependencies of gz-common6
+[1.508s] -- Looking for gz-utils3 -- found version 3.1.1
+[1.508s] -- Searching for dependencies of gz-utils3
+[1.508s] -- Searching for <gz-utils3> component [log]
+[1.511s] -- Looking for gz-utils3-log -- found version 3.1.1
+[1.512s] -- Searching for dependencies of gz-utils3-log
+[1.517s] -- Found Threads: TRUE  
+[1.528s] -- Searching for <gz-common6> component [av]
+[1.531s] -- Looking for gz-common6-av -- found version 6.2.1
+[1.531s] -- Searching for dependencies of gz-common6-av
+[1.535s] -- Checking for module 'libswscale'
+[1.549s] --   Found libswscale, version 7.5.100
+[1.581s] -- Found SWSCALE: TRUE  
+[1.585s] -- Checking for module 'libavdevice >= 56.4.100'
+[1.599s] --   Found libavdevice, version 60.3.100
+[1.640s] -- Found AVDEVICE: TRUE (Required is at least version "56.4.100") 
+[1.644s] -- Checking for module 'libavformat'
+[1.658s] --   Found libavformat, version 60.16.100
+[1.692s] -- Found AVFORMAT: TRUE  
+[1.696s] -- Checking for module 'libavcodec'
+[1.710s] --   Found libavcodec, version 60.31.102
+[1.743s] -- Found AVCODEC: TRUE  
+[1.748s] -- Checking for module 'libavutil'
+[1.761s] --   Found libavutil, version 58.29.100
+[1.792s] -- Found AVUTIL: TRUE  
+[1.793s] -- Searching for <gz-common6> component [events]
+[1.796s] -- Looking for gz-common6-events -- found version 6.2.1
+[1.796s] -- Searching for dependencies of gz-common6-events
+[1.796s] -- Looking for gz-math8 -- found version 8.2.0
+[1.797s] -- Searching for <gz-common6> component [graphics]
+[1.799s] -- Looking for gz-common6-graphics -- found version 6.2.1
+[1.800s] -- Searching for dependencies of gz-common6-graphics
+[1.800s] -- Looking for gz-math8 -- found version 8.2.0
+[1.806s] -- Found GzAssimp: TRUE (found version "5.3.0") 
+[1.806s] -- Searching for <gz-common6> component [io]
+[1.809s] -- Looking for gz-common6-io -- found version 6.2.1
+[1.809s] -- Searching for dependencies of gz-common6-io
+[1.810s] -- Searching for <gz-common6> component [profiler]
+[1.813s] -- Looking for gz-common6-profiler -- found version 6.2.1
+[1.813s] -- Searching for dependencies of gz-common6-profiler
+[1.813s] -- Searching for <gz-common6> component [testing]
+[1.816s] -- Looking for gz-common6-testing -- found version 6.2.1
+[1.816s] -- Searching for dependencies of gz-common6-testing
+[1.819s] -- Looking for gz-fuel_tools10 -- found version 10.1.0
+[1.819s] -- Searching for dependencies of gz-fuel_tools10
+[1.901s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "8.5.0")  
+[1.911s] -- Checking for module 'jsoncpp'
+[1.925s] --   Found jsoncpp, version 1.9.5
+[1.956s] -- Found JSONCPP: TRUE  
+[1.974s] -- Checking for module 'yaml-0.1'
+[1.988s] --   Found yaml-0.1, version 0.2.5
+[2.020s] -- Found YAML: TRUE  
+[2.024s] -- Checking for module 'libzip'
+[2.038s] --   Found libzip, version 1.7.3
+[2.069s] -- Found ZIP: TRUE  
+[2.070s] -- Looking for gz-utils3 -- found version 3.1.1
+[2.070s] -- Looking for gz-common6 -- found version 6.2.1
+[2.070s] -- Looking for gz-math8 -- found version 8.2.0
+[2.071s] -- Looking for gz-msgs11 -- found version 11.1.0
+[2.074s] Invoked command in '/home/thill/ros2_ws/src/turtlebot3_custom/build/turtlebot3_custom' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/thill/ros2_ws/src/turtlebot3_custom -DCMAKE_INSTALL_PREFIX=/home/thill/ros2_ws/src/turtlebot3_custom/install/turtlebot3_custom
