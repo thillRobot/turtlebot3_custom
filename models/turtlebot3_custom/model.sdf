@@ -3,8 +3,6 @@
   <model name='turtlebot3_custom'>
     
     <link name='custom_walls'>
-      <self_collide>0</self_collide>
-      <kinematic>0</kinematic>	  
       <inertial>
         <mass>5000</mass> <!-- Mass in kilograms -->
         <inertia>
@@ -16,15 +14,15 @@
           <iyz>0.0</iyz>
         </inertia>
       </inertial>    
-      <pose frame=''>0 0 5 0 0 1</pose>
+      <pose frame=''>0 0 0.1 0 0 0</pose>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
       <visual name='custom_walls_visual'>
-        <pose frame=''>0 0 0 0 0 1</pose>
+        <pose frame=''>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://turtlebot3_custom/meshes/custom_walls.stl</uri>
-            <scale>0.5 0.5 1.0</scale>
+	    <scale>1.0 1.0 1.0</scale>
           </mesh>
         </geometry>
         <material>
@@ -37,7 +35,7 @@
       <collision name='custom_walls_collision'>
         <laser_retro>0</laser_retro>
         <max_contacts>10</max_contacts>
-        <pose frame=''>0 0 0 0 0 1</pose>
+        <pose frame=''>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://turtlebot3_custom/meshes/custom_walls.stl</uri>
