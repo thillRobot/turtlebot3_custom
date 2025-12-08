@@ -54,7 +54,7 @@ else:
 BURGER_MAX_LIN_VEL = 0.22
 BURGER_MAX_ANG_VEL = 2.84
 
-WAFFLE_MAX_LIN_VEL = 2.08  # x8 actual speed limit
+WAFFLE_MAX_LIN_VEL = 2.08  # x4 actual speed limit
 WAFFLE_MAX_ANG_VEL = 3.64  # x2 actual speed limit
 
 LIN_VEL_STEP_SIZE = 0.01
