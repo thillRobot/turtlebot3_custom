@@ -6,6 +6,24 @@ https://github.com/ROBOTIS-GIT/turtlebot3_simulations/tree/main/turtlebot3_gazeb
 
 The teleop_keyboard code is from turtlebot_teleop from robotis
 
+## re-install gazebo sim from ROS 
+first remove previous installations of gazebo
+```
+  sudo apt remove gz-ionic && sudo apt autoremove
+```
+
+Install Gazebo Ionic (recommended version for ROS Kilted) from ros binaries
+
+```
+  sudo apt-get update
+  sudo apt-get install ros-${ROS_DISTRO}-ros-gz
+```
+Test the simulation program installed correctly
+```
+  gz sim
+```
+
+
 
 ## installation 
 clone this package into a working ROS2 workspace source directory
