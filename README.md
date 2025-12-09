@@ -109,6 +109,5 @@ test the map created with nav2
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/custom_map0.yaml
 ``` 
 
-
-
+## program a mission in the custom world 
 

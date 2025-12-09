@@ -150,7 +150,7 @@
           </scan>
           <range>
             <min>0.120000</min>
-            <max>3.5</max>
+            <max>10.0</max>
             <resolution>0.015000</resolution>
           </range>
           <noise>
@@ -414,7 +414,7 @@
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-	  <effort>100</effort> <!-- increased from 20 -->
+	  <effort>80</effort> <!-- increased from 20 -->
         </limit>
       </axis>
     </joint>
@@ -426,7 +426,7 @@
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
-          <effort>100</effort> <!-- increased from 20 -->
+          <effort>80</effort> <!-- increased from 20 -->
         </limit>
       </axis>
     </joint>
@@ -488,7 +488,7 @@
       <wheel_radius>0.033</wheel_radius>
 
       <!-- limits -->
-      <max_linear_acceleration>1.0</max_linear_acceleration>
+      <max_linear_acceleration>4.0</max_linear_acceleration>
 
       <topic>cmd_vel</topic>
 
