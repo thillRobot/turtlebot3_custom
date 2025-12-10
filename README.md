@@ -100,4 +100,8 @@ ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:
 ``` 
 
 ## program a mission in the custom world 
+the c++ node 'goal_publishser' can be used to programmaticall send the robot to goal
 
+edit lines 38-41 in `src/goal_publisher.cpp` and build the workspace to adjust the goal, keep in mind navigation will fail if the goal is not acheiveable so this will need to be adjusted depending on the custom world and map
+
+ 

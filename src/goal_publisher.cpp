@@ -36,7 +36,7 @@ int main(int argc, char * argv[])
 	std::cout<<str.str(); // print string to terminal
 	
 	msg.pose.position.x = 0.0;
-        msg.pose.position.y = 1.0;
+        msg.pose.position.y = -3.0;
         msg.pose.position.z = 0;
         msg.pose.orientation.w = 1.0;
 
