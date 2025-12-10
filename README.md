@@ -88,9 +88,9 @@ when finished, save the map before closing simulator or cartographer node
 
 ## navigation in the custom world
 
-start the simulator if it is not running
+start the simulator if it is not running, choose an initial robot pose
 ```
-ros2 launch turtlebot3_custom turtlebot3_custom.launch.py
+ros2 launch turtlebot3_custom turtlebot3_custom.launch.py x_pose:=0 y_pose:=5
 ```
 
 test the map created with nav2 

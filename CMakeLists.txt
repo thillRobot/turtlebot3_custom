@@ -69,6 +69,10 @@ foreach(lib ${OBSTACLE_LIBS})
 endforeach()
 
 
+add_executable(goal_publisher src/goal_publisher.cpp)
+target_link_libraries(goal_publisher PUBLIC rclcpp::rclcpp ${std_msgs_TARGETS}
+	                                                   ${geometry_msgs_TARGETS})
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
@@ -114,6 +118,7 @@ ament_export_dependencies(
   rclpy
   sensor_msgs
   tf2
+  goal_publisher	
 )
 
 ament_package()
