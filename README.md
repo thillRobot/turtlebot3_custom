@@ -27,6 +27,13 @@ echo "export GZ_SIM_RESOURCE_PATH=~/ros2_ws/src/turtlebot3_custom/models/" >> ~/
 source ~/.bashrc
 ```
 
+make sure to have a robot model selected, this can be added to ~/.bashrc also
+this package has some customizations on 'waffle_pi' but the others are unmodified
+```
+echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc
+source ~/.bashrc
+```
+
 test the robot in TNTech AIEB robotics lab, room 143
 ```
 ros2 launch turtlebot3_custom turtlebot3_custom.launch.py
