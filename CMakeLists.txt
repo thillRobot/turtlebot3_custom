@@ -72,6 +72,10 @@ endforeach()
 add_executable(goal_publisher src/goal_publisher.cpp)
 target_link_libraries(goal_publisher PUBLIC rclcpp::rclcpp ${std_msgs_TARGETS}
 	                                                   ${geometry_msgs_TARGETS})
+# add name of each executable to list of targets
+install(TARGETS 
+	goal_publisher	
+  DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

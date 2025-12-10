@@ -35,8 +35,8 @@ int main(int argc, char * argv[])
   	str<<"main() loop cnt: "<<cnt<<std::endl;
 	std::cout<<str.str(); // print string to terminal
 	
-	msg.pose.position.x = -6.0;
-        msg.pose.position.y = 4.5;
+	msg.pose.position.x = 0.0;
+        msg.pose.position.y = 1.0;
         msg.pose.position.z = 0;
         msg.pose.orientation.w = 1.0;
 

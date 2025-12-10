@@ -95,6 +95,7 @@ ros2 launch turtlebot3_custom turtlebot3_custom.launch.py x_pose:=0 y_pose:=5
 
 test the map created with nav2 
 ```
+cd ~/ros2_ws/src/turtlebot3_custom
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/custom_map0.yaml
 ``` 
 
