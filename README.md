@@ -88,6 +88,9 @@ start the simulator in the custom world
 ros2 launch turtlebot3_custom turtlebot3_custom.launch.py
 ```
 
+if the sim does not re-start correctly, run `killall ruby` and try agin,
+also starting a new terminal can fix strange behaviour ( i think this is a gazebo ionic bug)
+
 start the SLAM process 
 
 ```
@@ -106,15 +109,20 @@ when finished, save the map before closing simulator or cartographer node
 
 ## navigation in the custom world
 
-start the simulator if it is not running
+start the simulator if it is not running, choose an initial robot pose
 ```
-ros2 launch turtlebot3_custom turtlebot3_custom.launch.py
+ros2 launch turtlebot3_custom turtlebot3_custom.launch.py x_pose:=0 y_pose:=5
 ```
 
 test the map created with nav2 
 ```
+cd ~/ros2_ws/src/turtlebot3_custom
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/custom_map0.yaml
 ``` 
 
 ## program a mission in the custom world 
+the c++ node 'goal_publishser' can be used to programmaticall send the robot to goal
 
+edit lines 38-41 in `src/goal_publisher.cpp` and build the workspace to adjust the goal, keep in mind navigation will fail if the goal is not acheiveable so this will need to be adjusted depending on the custom world and map
+
+ 
