@@ -125,4 +125,11 @@ the c++ node 'goal_publishser' can be used to programmaticall send the robot to 
 
 edit lines 38-41 in `src/goal_publisher.cpp` and build the workspace to adjust the goal, keep in mind navigation will fail if the goal is not acheiveable so this will need to be adjusted depending on the custom world and map
 
+with the simulator and navigation running, run the goal_publihser node
+
+```
+ros2 run turtlebot3_custom goal_publisher
+```
+
+if everything is working correctly, the robot should plan a path and navigate to the goal
  
