@@ -54,6 +54,7 @@ source ~/.bashrc
 
 test the robot in TNTech AIEB robotics lab, room 143
 ```
+killall -9 gzserver gzclient
 ros2 launch turtlebot3_custom turtlebot3_custom.launch.py
 ```
 
@@ -83,9 +84,10 @@ more elements can be added as separate models, each needs a `visual` and `collis
 ## mapping the custom world 
 use turtlebot cartographer to make a map of the custom world, this will take some time as the robot is slow and small
 
-start the simulator in the custom world
+start the simulator in the custom world (shut down previous instances first)
 ```
-ros2 launch turtlebot3_custom turtlebot3_custom.launch.py
+killall -9 gzserver gzclient
+ros2 launch turtlebot3_custom turtlebot3_custom.launch.py x_pose:=0 y_pose:=5
 ```
 
 if the sim does not re-start correctly, run `killall ruby` and try agin,
@@ -111,6 +113,7 @@ when finished, save the map before closing simulator or cartographer node
 
 start the simulator if it is not running, choose an initial robot pose
 ```
+killall -9 gzserver gzclient
 ros2 launch turtlebot3_custom turtlebot3_custom.launch.py x_pose:=0 y_pose:=5
 ```
 
@@ -121,7 +124,7 @@ ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:
 ``` 
 
 ## program a mission in the custom world 
-the c++ node 'goal_publishser' can be used to programmaticall send the robot to goal
+the c++ node 'goal_publisher' can be used to programmatically send the robot to a goal
 
 edit lines 38-41 in `src/goal_publisher.cpp` and build the workspace to adjust the goal, keep in mind navigation will fail if the goal is not acheiveable so this will need to be adjusted depending on the custom world and map
 
