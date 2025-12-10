@@ -70,6 +70,9 @@ start the simulator in the custom world
 ros2 launch turtlebot3_custom turtlebot3_custom.launch.py
 ```
 
+if the sim does not re-start correctly, run `killall ruby` and try agin,
+also starting a new terminal can fix strange behaviour ( i think this is a gazebo ionic bug)
+
 start the SLAM process 
 
 ```
