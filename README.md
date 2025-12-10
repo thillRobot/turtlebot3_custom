@@ -67,12 +67,12 @@ ros2 run turtlebot3_custom teleop_keyboard.py
 
 to change the model in the custom world you can add mesh files to models/turtlebot3_custom/meshes
 the files should be .stl or .dae 
-the file for the walls  should be called `custom_wall.stl` or the turtlebot3_custom/model.sdf needs to have new filename
+the file for the walls  should be called `custom_walls_floor.stl` or the turtlebot3_custom/model.sdf needs to have new filename
 if the scale is correct, then it should work fine, if not adjust the values inside the scale tag
 (model.sdf, lines 23-26)
 ```
 <mesh>
-  <uri>model://turtlebot3_custom/meshes/custom_walls.stl</uri>
+  <uri>model://turtlebot3_custom/meshes/custom_walls_floor.stl</uri>
   <scale>1.0 1.0 1.0</scale>
 </mesh>
 ```
