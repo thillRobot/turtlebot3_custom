@@ -49,7 +49,7 @@ source ~/.bashrc
 test the simulator with robot in virtual TNTech AIEB robotics lab, room 143
 ```
 killall -9 gzserver gzclient
-ros2 launch turtlebot3_custom turtlebot3_custom.launch.py x_pose:=0 y_pose:=0
+ros2 launch turtlebot3_custom turtlebot3_custom.launch.py x_pose:=0 y_pose:=5
 ```
 
 drive the robot with the teleop_keyboard node
@@ -94,8 +94,9 @@ start the SLAM process
 ```
 ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
 ```
+the location of the robot when cartographer starts will be the map origin
 
-drive the robot to make a map, drive slowly and in simple paths to make a clean map
+drive the robot to make a map, drive slowly and in simple paths to make a clean map,
 if the robot slips or gets stuck, the map will be messy
 ```
 ros2 run turtlebot3_custom teleop_keyboard.py
