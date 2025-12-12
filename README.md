@@ -8,13 +8,25 @@ The teleop_keyboard code is from turtlebot_teleop from robotis
 
 
 ## installation 
-clone this package into a working ROS2 workspace source directory
+make sure to properly source the user (overlay) workspace
+
+```
+source ~/ros_ws/install/local_setup.bash
+```
+
+add this line to `~/.bashrc` so it runs at the start of each new terminal
+```
+echo "source ~/ros_ws/install/local_setup.bash" >> ~/.bashrc
+```
+
+
+clone this package into the user workspace source directory
 ```
 cd ~/ros2_ws/src
 git clone https://github.com/thillRobot/turtlebot3_custom.git
 ```
 
-build the workspace
+move to the root of the workspace and build the workspace
 ```
 cd ~/ros2_ws
 colcon build
@@ -34,7 +46,7 @@ echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-test the robot in TNTech AIEB robotics lab, room 143
+test the robot in virtual TNTech AIEB robotics lab, room 143
 ```
 killall -9 gzserver gzclient
 ros2 launch turtlebot3_custom turtlebot3_custom.launch.py
@@ -87,8 +99,10 @@ ros2 run turtlebot3_custom teleop_keyboard.py
 ```
 
 when finished, save the map before closing simulator or cartographer node
+choose a new map name or overwrite `custom_map0`
 ```
-  ros2 run nav2_map_server map_saver_cli -f maps/custom_map0
+cd ~/ros2_ws/src/turtlebot3_custom
+ros2 run nav2_map_server map_saver_cli -f maps/custom_map0
 ```
 
 ## navigation in the custom world
@@ -99,7 +113,7 @@ killall -9 gzserver gzclient
 ros2 launch turtlebot3_custom turtlebot3_custom.launch.py x_pose:=0 y_pose:=5
 ```
 
-test the map created with nav2 
+test the map previously created with cartographer
 ```
 cd ~/ros2_ws/src/turtlebot3_custom
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/custom_map0.yaml
