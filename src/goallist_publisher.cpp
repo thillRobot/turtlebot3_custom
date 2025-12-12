@@ -1,6 +1,6 @@
-// goal_publisher.cpp - creates a ros2 node and publishes a goal topic
+// goallist_publisher.cpp - creates a ros2 node and publishes a list of goals in series
 // Tristan Hill, turtlebot3_custom
-// November 20, 2025
+// Decemeber 11, 2025
  
 #include <chrono>
 #include <memory>
@@ -9,8 +9,6 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
-//#include <tf2/LinearMath/Quaternion.h>
-#include "tf2/LinearMath/Quaternion.h"
 
 using namespace std::chrono_literals; // time durations with units
 
@@ -34,8 +32,6 @@ int main(int argc, char * argv[])
   float goallist[5][3]={{0.0,-1.0,0.0},   //{x,y,theta_z}
 	    	        {0.0,-3.0,0.7},
 			{0.0,-5.0,1.5}};
-  tf2::Quaternion q;
-
 
   int cnt=0;
   rclcpp::WallRate loop_rate(50);
@@ -51,12 +47,7 @@ int main(int argc, char * argv[])
 	msg.pose.position.x = goallist[0][0];
         msg.pose.position.y = goallist[0][1];
         msg.pose.position.z = 0;
-  	q.setRPY(goallist[0][2],0,0);  // create quaternion from roll pitch yw
-	msg.pose.orientation.w = q.w();
-	msg.pose.orientation.x = q.x();
-	msg.pose.orientation.y = q.y();
-	msg.pose.orientation.z = q.z();
-
+        msg.pose.orientation.w = goallist[0][2];
 
 	std::cout<<"publishing goal 1"<<std::endl;
 	pub->publish(msg);    // publish message
@@ -69,11 +60,7 @@ int main(int argc, char * argv[])
 	msg.pose.position.x = goallist[1][0];
         msg.pose.position.y = goallist[1][1];
         msg.pose.position.z = 0;
-  	q.setRPY(goallist[1][2],0,0);  // create quaternion from roll pitch yw
-	msg.pose.orientation.w = q.w();
-	msg.pose.orientation.x = q.x();
-	msg.pose.orientation.y = q.y();
-	msg.pose.orientation.z = q.z();
+        msg.pose.orientation.w = goallist[1][2];
 
 	std::cout<<"publishing goal 2"<<std::endl;
 	pub->publish(msg);    // publish message

@@ -22,6 +22,7 @@ find_package(gz-plugin REQUIRED)
 find_package(ament_cmake_python REQUIRED) # Important for Python integration
 find_package(rclpy REQUIRED) # Or other Python dependencies
 
+
 file(MAKE_DIRECTORY "include")
 file(MAKE_DIRECTORY "rviz")
 file(MAKE_DIRECTORY "lib")
@@ -70,8 +71,21 @@ endforeach()
 
 
 add_executable(goal_publisher src/goal_publisher.cpp)
-target_link_libraries(goal_publisher PUBLIC rclcpp::rclcpp ${std_msgs_TARGETS}
-	                                                   ${geometry_msgs_TARGETS})
+target_link_libraries(goal_publisher PUBLIC 
+		      rclcpp::rclcpp 
+		      ${std_msgs_TARGETS}
+	              ${geometry_msgs_TARGETS}
+	      	      tf2::tf2
+	      	      tf2_ros::tf2_ros)
+#ament_target_dependencies(
+#    goal_publisher
+#    tf2
+#    tf2_ros 
+#    rclcpp
+#    geometry_msgs
+#    std_msgs    
+#)
+						   
 # add name of each executable to list of targets
 install(TARGETS 
 	goal_publisher	
