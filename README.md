@@ -11,12 +11,12 @@ The teleop_keyboard code is from turtlebot_teleop from robotis
 make sure to properly source the user (overlay) workspace
 
 ```
-source ~/ros_ws/install/local_setup.bash
+source ~/ros2_ws/install/local_setup.bash
 ```
 
 add this line to `~/.bashrc` so it runs at the start of each new terminal
 ```
-echo "source ~/ros_ws/install/local_setup.bash" >> ~/.bashrc
+echo "source ~/ros2_ws/install/local_setup.bash" >> ~/.bashrc
 ```
 
 
@@ -46,7 +46,7 @@ echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-test the robot in virtual TNTech AIEB robotics lab, room 143
+test the simulator with robot in virtual TNTech AIEB robotics lab, room 143
 ```
 killall -9 gzserver gzclient
 ros2 launch turtlebot3_custom turtlebot3_custom.launch.py
@@ -60,11 +60,13 @@ ros2 run turtlebot3_custom teleop_keyboard.py
 
 ## Creating or modifiying a custom world 
 
-to change the model in the custom world you can add mesh files to models/turtlebot3_custom/meshes
+to change the model in the custom world add mesh files to models/turtlebot3_custom/meshes
+
 the files should be .stl or .dae 
-the file for the walls  should be called `custom_walls_floor.stl` or the turtlebot3_custom/model.sdf needs to have new filename
+the current file for the wallsshould be called `custom_walls_floor.stl` or the `turtlebot3_custom/model.sdf` needs to edited to have new filename
+
 if the scale is correct, then it should work fine, if not adjust the values inside the scale tag
-(model.sdf, lines 23-26)
+(model.sdf, lines 23-26), 
 ```
 <mesh>
   <uri>model://turtlebot3_custom/meshes/custom_walls_floor.stl</uri>
@@ -93,7 +95,8 @@ start the SLAM process
 ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
 ```
 
-drive the robot to make a map
+drive the robot to make a map, drive slowly and in simple paths to make a clean map
+if the robot slips or gets stuck, the map will be messy
 ```
 ros2 run turtlebot3_custom teleop_keyboard.py
 ```
@@ -131,4 +134,5 @@ ros2 run turtlebot3_custom goal_publisher
 ```
 
 if everything is working correctly, the robot should plan a path and navigate to the goal
+this node uses a open loop timing wait between goal, a better method is needed
  
