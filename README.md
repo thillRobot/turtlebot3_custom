@@ -49,7 +49,7 @@ source ~/.bashrc
 test the simulator with robot in virtual TNTech AIEB robotics lab, room 143
 ```
 killall -9 gzserver gzclient
-ros2 launch turtlebot3_custom turtlebot3_custom.launch.py x_pose:=0 y_pose:=5
+ros2 launch turtlebot3_custom turtlebot3_custom.launch.py x_pose:=0 y_pose:=0
 ```
 
 drive the robot with the teleop_keyboard node
