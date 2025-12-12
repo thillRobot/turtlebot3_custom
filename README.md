@@ -76,6 +76,7 @@ if the scale is correct, then it should work fine, if not adjust the values insi
 
 more elements can be added as separate models, each needs a `visual` and `collision` tag
 
+after modifing the model or sdf file, re-build the workspace so the files are copied to the package share directory 
 
 ## mapping the custom world 
 use turtlebot cartographer to make a map of the custom world, this will take some time as the robot is slow and small
